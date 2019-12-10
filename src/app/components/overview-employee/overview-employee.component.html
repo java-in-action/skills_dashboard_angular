@@ -1,0 +1,19 @@
+<div>
+  <ng-container *ngIf="employee">
+    <h2>{{ employee.name }}</h2>
+    <ul>
+      <li><strong>Level</strong> - {{ employee.level }}</li>
+      <li><strong>Location</strong> - {{ employee.location }}</li>
+      <li><strong>Birthday</strong> - {{ employee.birthday }}</li>
+      <li><strong>Enterprise ID</strong> - {{ employee.eId }}</li>
+    </ul>
+
+    <h4>Skills</h4>
+    <ul>
+      <li *ngFor="let skill of skills">{{skill.description}}</li>
+    </ul>
+  </ng-container>
+  <ng-container *ngIf="!employee">
+    <h2>Oops! No valid employee ID provided</h2>
+  </ng-container>
+</div>
