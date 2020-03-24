@@ -1,0 +1,11 @@
+<h2>Edit employee information</h2>
+<h3>{{ employee | json }}</h3>
+<hr />
+
+<ng-container *ngIf="employee.sysId">
+    <app-employee-form [employee]="employee"></app-employee-form>
+    <button mat-raised-button color="primary" (click)="saveEmployee()">Save</button>
+</ng-container>
+<ng-container *ngIf="!employee.sysId">
+    <h2>Oops! No valid employee ID provided</h2>
+</ng-container>
