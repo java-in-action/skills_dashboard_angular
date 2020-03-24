@@ -1,0 +1,27 @@
+<form>
+    <mat-form-field>
+        <input matInput placeholder="Name" [(ngModel)]="employee.name" name="name">
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+        <input matInput placeholder="Birthday" [(ngModel)]="employee.birthday" name="birthday">
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+        <input matInput placeholder="Level" type="number" step="1" min="1" max="12" [(ngModel)]="employee.level"
+            name="level">
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+        <input matInput placeholder="Location" [(ngModel)]="employee.location" name="location">
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+        <input matInput placeholder="Enterprise ID" [(ngModel)]="employee.eId" name="eId">
+    </mat-form-field>
+    <br />
+</form>
