@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Employee } from '../interfaces/Employee';
+const AWS_SERVER = 'http://skillsdashboardrest-env.eba-nrkrv3i6.us-west-2.elasticbeanstalk.com';
 
 @Injectable({
     providedIn: 'root'
@@ -11,12 +12,12 @@ export class EmployeeService {
 
 
     public getEmployees() {
-        const endpoint = 'http://localhost:8080/rest/employees/';
+        const endpoint = AWS_SERVER + '/rest/employees/';
         return this.http.get(endpoint);
     }
 
     public getEmployeeById(sysId) {
-        const endpoint = 'http://localhost:8080/rest/employees/' + sysId;
+        const endpoint = AWS_SERVER + '/rest/employees/' + sysId;
         return this.http.get(endpoint);
     }
 
@@ -30,7 +31,7 @@ export class EmployeeService {
             location: employee.location,
             birthday: employee.birthday
         };
-        const endpoint = 'http://localhost:8080/rest/employees/';
+        const endpoint = AWS_SERVER + '/rest/employees/';
         return this.http.post(endpoint, body);
     }
 
@@ -43,7 +44,7 @@ export class EmployeeService {
             location: employee.location,
             birthday: employee.birthday
         };
-        const endpoint = 'http://localhost:8080/rest/employees/' + employee.sysId;
+        const endpoint = AWS_SERVER + '/rest/employees/' + employee.sysId;
         return this.http.post(endpoint, body);
     }
 }
