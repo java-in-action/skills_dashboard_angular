@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Employee } from 'src/app/interfaces/Employee';
-import { Skill } from 'src/app/interfaces/skill';
+import { Skill } from 'src/app/interfaces/Skill';
 import { SkillsService } from 'src/app/services/skills.service';
 import { EmployeeService } from '../../services/employee.service';
 
@@ -11,7 +11,7 @@ import { EmployeeService } from '../../services/employee.service';
   styleUrls: ['./overview-employee.component.css']
 })
 export class OverviewEmployeeComponent implements OnInit {
-  private employee: Employee;
+  employee: Employee;
   private skills: Array<Skill> = [];
 
   constructor(private route: ActivatedRoute, private employeeService: EmployeeService, private skillsService: SkillsService) { }

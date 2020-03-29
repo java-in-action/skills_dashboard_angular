@@ -10,7 +10,7 @@ import { EmployeeService } from 'src/app/services/employee.service';
 })
 export class NewEmployeeComponent implements OnInit {
 
-    private employee: Employee = {
+    employee: Employee = {
         birthday: '',
         eId: '',
         level: undefined,

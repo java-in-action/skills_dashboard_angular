@@ -12,7 +12,7 @@ import { EmployeeService } from '../../services/employee.service';
 })
 export class SearchEmployeeComponent implements OnInit {
 
-    private alertaSuccess: boolean = false;
+    alertaSuccess: boolean = false;
     idInput;
     eId = '123';
     dataSource;
